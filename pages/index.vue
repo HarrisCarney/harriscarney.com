@@ -76,7 +76,7 @@
         </p>
       </div>
     </div>
-    <ContactForm />
+    <ContactForm class="contactForm" />
   </div>
 </template>
 
@@ -118,6 +118,7 @@ export default {
 
 .myWork {
   grid-column: 1;
+  grid-row: 2;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -163,6 +164,7 @@ export default {
 }
 
 .landingDetails {
+  grid-row: 1;
   display: flex;
   align-items: center;
   width: 100%;
@@ -170,9 +172,8 @@ export default {
 }
 
 .detailsContainer {
-  margin-top: 160px;
+  margin-top: 200px;
   padding-left: 80px;
-  grid-row: 3;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -271,11 +272,18 @@ export default {
   top: 100px;
 }
 
+.contactForm {
+  grid-row: 3;
+}
+
 @media only screen and (max-width: 800px) {
   .detailsContainer {
     height: 70vh;
     width: 100vw;
     padding-right: 80px;
+  }
+  .test {
+    display: none;
   }
 }
 </style>
