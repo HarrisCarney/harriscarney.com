@@ -29,6 +29,10 @@ export default {
   grid-column: 1;
 }
 
+.logo {
+  width: 50px;
+}
+
 .header {
   height: 80px;
   display: flex;
@@ -59,7 +63,11 @@ export default {
 .header .navigation a {
   text-decoration: none;
   color: #333;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 14px;
+}
+
+.header .navigation a:hover {
+  color: var(--accent-color);
 }
 </style>

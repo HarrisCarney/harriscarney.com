@@ -1,19 +1,20 @@
 <template>
   <div class="container">
-    <div class="test2">DESIGN GOES FAR BEYOND WHAT THE USER CAN SEE.</div>
     <div class="landingDetails">
       <div class="detailsContainer">
         <div class="detailsTitles">
-          <h2 class="detailsSubtitle">Hello.</h2>
-          <h1 class="detailsTitle">My Name is Harris.</h1>
+          <h2 class="detailsSubtitle">Front End Developer & Designer</h2>
+          <h1 class="detailsTitle">Harris Carney</h1>
         </div>
         <p class="detailsDescription">
-          I’m a <span>front end developer and designer</span> who believes that
-          interaction with the digital world has the profound ability to shape
-          views, trigger emotions, and command attention. My passion is bringing
-          these ideas, feelings, and thoughts to fruition through good design
-          and functional development.
+          Our interaction with the digital world has the ability to shape our
+          views, trigger our emotions, and command our attention. My passion is
+          bringing these ideas, feelings, and thoughts to fruition through good
+          design and functional development.
         </p>
+        <div class="detailsButton">
+          <a href="#">Contact Me</a>
+        </div>
         <div class="detailsSocial">
           <a href="https://codepen.io/harriscarney" target="_">
             <img src="~assets/images/codepen.svg" width="16" />
@@ -25,18 +26,6 @@
             <img src="~assets/images/github.svg" width="16" />
           </a>
         </div>
-      </div>
-    </div>
-    <div class="test">
-      <div class="testContent">
-        <p>
-          What do you see?
-          <img
-            src="~assets/images/arrow.svg"
-            width="16"
-            style="margin-top: 14px;"
-          />
-        </p>
       </div>
     </div>
     <div class="myWork">
@@ -69,13 +58,6 @@
         text-color="#DF1F2D"
       />
     </div>
-    <div class="test">
-      <div class="testContent">
-        <p>
-          My Work.
-        </p>
-      </div>
-    </div>
     <ContactForm class="contactForm" />
   </div>
 </template>
@@ -104,7 +86,7 @@ export default {
 
 <style>
 :root {
-  --accent-color: #bf0000;
+  --accent-color: #1875ff;
   --dark-accent: #0a61cd;
   --blkfox-orange: #f04e36;
   --spiderman-red: #df1f2d;
@@ -113,12 +95,9 @@ export default {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 200px;
 }
 
 .myWork {
-  grid-column: 1;
-  grid-row: 2;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -132,85 +111,68 @@ export default {
   margin: 60px;
 }
 
-.test2 {
-  position: absolute;
-  font-family: 'Sen';
-  top: 0;
-  color: rgba(209, 209, 209, 0.4);
-  font-size: 18px;
-  width: 400px;
-  left: 80px;
-  line-height: 50px;
-  letter-spacing: 0.6em;
-}
-
-.test {
-  grid-column: 2;
-  height: 100vh;
-  border-left: 2px solid #efefef;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.testContent {
-  font-family: 'Sen';
-
-  writing-mode: vertical-rl;
-  margin-left: 20px;
-  font-weight: bold;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
 .landingDetails {
-  grid-row: 1;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 80px);
 }
 
 .detailsContainer {
-  margin-top: 200px;
-  padding-left: 80px;
+  padding: 0 80px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 55vh;
 }
 
 .detailsTitle {
   position: relative;
   margin: 10px 0 0px 0;
   font-size: 3em;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-}
-
-.detailsTitle:after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  width: 550px;
-  height: 8px;
-  background: var(--accent-color);
+  letter-spacing: 0.05em;
 }
 
 .detailsSubtitle {
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: var(--accent-color);
 }
 
 .detailsDescription {
+  margin: 20px 0 20px 0;
   width: 80%;
   max-width: 700px;
   font-size: 14px;
   line-height: 36px;
   letter-spacing: 0.06em;
+}
+
+.detailsButton {
+  width: 260px;
+  height: 48px;
+  margin: 0 0 40px 0;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailsButton > a {
+  text-decoration: none;
+  font-family: 'Sen';
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+}
+
+.detailsButton:hover {
+  background: var(--accent-color);
+}
+
+.detailsButton:hover a {
+  color: white;
 }
 
 .detailsDescription > span {
@@ -280,10 +242,7 @@ export default {
   .detailsContainer {
     height: 70vh;
     width: 100vw;
-    padding-right: 80px;
-  }
-  .test {
-    display: none;
+    padding: 0 60px;
   }
 }
 </style>

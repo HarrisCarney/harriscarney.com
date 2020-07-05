@@ -44,9 +44,9 @@ export default {
   font-family: 'Sen';
   width: 100%;
   display: flex;
-  align-items: center;
-  margin: 50px 0;
-  justify-content: space-around;
+  padding: 0 80px;
+  margin: 100px 0;
+  justify-content: space-between;
 }
 
 .bigAssNumber {
@@ -127,6 +127,8 @@ export default {
 @media only screen and (max-width: 800px) {
   .itemContainer {
     flex-direction: column;
+    padding: 0 60px;
+    width: 100vw;
   }
 
   .itemDetails {
@@ -145,6 +147,10 @@ export default {
 
   .itemImage {
     order: 1;
+  }
+
+  .bigAssNumber {
+    top: -450px;
   }
 }
 </style>
