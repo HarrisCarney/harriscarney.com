@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="itemImage">
-      <img :src="require(`@/assets/images/${image}`)" width="400" />
+      <img :src="require(`@/assets/images/${image}`)" class="image" />
     </div>
   </div>
 </template>
@@ -44,14 +44,13 @@ export default {
   font-family: 'Sen';
   width: 100%;
   display: flex;
-  padding: 0 80px;
-  margin: 100px 0;
+  margin: 150px 0;
   justify-content: space-between;
 }
 
 .bigAssNumber {
   position: absolute;
-  top: -200px;
+  top: -180px;
   font-size: 300px;
   z-index: -1;
   color: #f6f6f6;
@@ -62,6 +61,7 @@ export default {
   order: 1;
   height: 360px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   font-size: 12px;
 }
@@ -103,6 +103,10 @@ export default {
   justify-content: space-between;
 }
 
+.item {
+  width: 600px;
+}
+
 .itemContainer:nth-child(odd) .itemDetails {
   order: 2;
   align-items: flex-end;
@@ -127,14 +131,17 @@ export default {
 @media only screen and (max-width: 800px) {
   .itemContainer {
     flex-direction: column;
-    padding: 0 60px;
     width: 100vw;
   }
 
   .itemDetails {
     order: 2;
-    max-width: 80%;
+    max-width: 100%;
     margin: 20px 0 0 0;
+  }
+
+  .image {
+    width: 300px;
   }
 
   .itemDetails {

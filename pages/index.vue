@@ -27,6 +27,14 @@
           </a>
         </div>
       </div>
+      <div class="newthing">
+        <div class="testing"></div>
+        <img src="~assets/images/harris.png" width="500" />
+        <div class="textBar">
+          <h2>My Work</h2>
+          <img src="~assets/images/downArrow.svg" width="18" />
+        </div>
+      </div>
     </div>
     <div class="myWork">
       <h1>DESIGN. CREATE. BUILD.</h1>
@@ -97,9 +105,39 @@ export default {
   display: grid;
 }
 
+.newthing {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  order: 2;
+}
+
+.textBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textBar > h2 {
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.testing {
+  position: absolute;
+  z-index: -1;
+  width: 80%;
+  height: 120%;
+  background: var(--accent-color);
+}
+
 .myWork {
   width: 100%;
   display: flex;
+  padding: 0 80px;
   flex-direction: column;
 }
 
@@ -108,19 +146,19 @@ export default {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 0.3em;
-  margin: 60px;
 }
 
 .landingDetails {
   display: flex;
   align-items: center;
-  width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
+  justify-content: space-between;
+  margin: 80px;
 }
 
 .detailsContainer {
-  padding: 0 80px;
   display: flex;
+  order: 1;
   flex-direction: column;
 }
 
@@ -239,10 +277,19 @@ export default {
 }
 
 @media only screen and (max-width: 800px) {
+  .landingDetails {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .newthing {
+    margin: 0;
+    padding: 0;
+    order: 1;
+  }
   .detailsContainer {
-    height: 70vh;
-    width: 100vw;
-    padding: 0 60px;
+    margin: 0 60px;
+    order: 2;
   }
 }
 </style>

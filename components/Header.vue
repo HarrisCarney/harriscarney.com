@@ -26,7 +26,10 @@ export default {
 </script>
 <style>
 .headerContainer {
-  grid-column: 1;
+  position: fixed;
+  width: 100vw;
+  background: white;
+  z-index: 999;
 }
 
 .logo {
