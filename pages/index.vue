@@ -27,9 +27,10 @@
           </a>
         </div>
       </div>
-      <div class="newthing">
-        <div class="testing"></div>
-        <img src="~assets/images/harris.png" width="500" />
+      <div class="landingImage">
+        <div class="profilePicture">
+          <img src="~assets/images/harris.png" />
+        </div>
         <div class="textBar">
           <h2>My Work</h2>
           <img src="~assets/images/downArrow.svg" width="18" />
@@ -50,7 +51,7 @@
       <WorkItem
         number="02"
         title="TexasFITT Fitness Center"
-        subtitle="Freelance"
+        subtitle="Employed"
         description="TexasFITT is a health and wellness center located in Arlington, Texas with a strong focus on their community and a passion for spreading love for fitness. This is built in Wordpress to make it more useable for my client’s."
         link="https://texasfitt.com"
         image="texasfitt.png"
@@ -66,18 +67,15 @@
         text-color="#DF1F2D"
       />
     </div>
-    <ContactForm class="contactForm" />
   </div>
 </template>
 
 <script>
 import WorkItem from '~/components/WorkItem.vue'
-import ContactForm from '~/components/ContactForm.vue'
 
 export default {
   components: {
-    WorkItem,
-    ContactForm
+    WorkItem
   },
   data() {
     return {
@@ -101,42 +99,10 @@ export default {
   --texasfitt-green: #25c106;
 }
 
-.container {
-  display: grid;
-}
-
-.newthing {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  order: 2;
-}
-
-.textBar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.textBar > h2 {
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.testing {
-  position: absolute;
-  z-index: -1;
-  width: 80%;
-  height: 120%;
-  background: var(--accent-color);
-}
-
 .myWork {
   width: 100%;
   display: flex;
+  margin-top: 40px;
   padding: 0 80px;
   flex-direction: column;
 }
@@ -145,21 +111,27 @@ export default {
   font-family: 'Sen';
   font-size: 20px;
   font-weight: bold;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
 }
 
 .landingDetails {
+  position: relative;
+  top: 100px;
   display: flex;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  order: 1;
   justify-content: space-between;
-  margin: 80px;
+  padding: 80px;
 }
 
 .detailsContainer {
   display: flex;
   order: 1;
+  height: 450px;
   flex-direction: column;
+  justify-content: center;
 }
 
 .detailsTitle {
@@ -251,45 +223,55 @@ export default {
 }
 
 .landingImage {
-  position: relative;
-  top: 80px;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 50vw;
-  height: 100vh;
+  width: 40%;
+  order: 2;
+  display: flex;
+  align-items: flex-end;
 }
 
-.landingImage svg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: -1;
+.textBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.landingImage img {
-  position: absolute;
-  top: 100px;
+.textBar > h2 {
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
-.contactForm {
-  grid-row: 3;
+.profilePicture {
+  background: var(--accent-color);
 }
+
+.profilePicture > img {
+  width: 100%;
+}
+
 
 @media only screen and (max-width: 800px) {
   .landingDetails {
     flex-direction: column;
+    align-items: flex-start;
     margin: 0;
-    padding: 0;
+    padding: 0 40px;
   }
-  .newthing {
-    margin: 0;
-    padding: 0;
+  .landingImage {
     order: 1;
+    width: 100%;
   }
   .detailsContainer {
-    margin: 0 60px;
     order: 2;
+  }
+
+  .textBar {
+    display: none;
+  }
+
+  .myWork {
+    padding: 0 40px;
   }
 }
 </style>

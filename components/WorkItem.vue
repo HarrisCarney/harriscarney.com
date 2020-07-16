@@ -1,32 +1,25 @@
 <template>
   <div class="itemContainer">
-    <div class="itemDetails">
-      <div class="bigAssNumber">{{ number }}</div>
-      <div class="itemDetails__subtitle" :style="{ color: textColor }">
-        {{ subtitle }}
+    <div class="bigAssNumber">{{ number }}.</div>
+    <div class="itemDetailsContainer">
+      <div class="itemDetails">
+        <div class="itemDetails__subtitle" :style="{ color: textColor }">
+          {{ subtitle }}
+        </div>
+        <div class="itemDetails__title">{{ title }}</div>
+        <div class="itemDetails__description">{{ description }}</div>
+        <div class="itemDetails__link" :style="{ borderColor: textColor }">
+          <a :href="link" :style="{ color: textColor }">View Site</a>
+        </div>
       </div>
-      <div class="itemDetails__title">{{ title }}</div>
-      <div class="itemDetails__description">{{ description }}</div>
-      <div class="itemDetails__link">
-        <a :href="link" :style="{ color: textColor }">
-          View Site
-          <RightArrow :color="textColor" />
-        </a>
+      <div class="itemImage">
+        <img :src="require(`@/assets/images/${image}`)" class="image" />
       </div>
-    </div>
-    <div class="itemImage">
-      <img :src="require(`@/assets/images/${image}`)" class="image" />
     </div>
   </div>
 </template>
 <script>
-import RightArrow from '~/components/RightArrow.vue'
-
 export default {
-  components: {
-    RightArrow
-  },
-
   props: [
     'number',
     'title',
@@ -44,22 +37,36 @@ export default {
   font-family: 'Sen';
   width: 100%;
   display: flex;
+  flex-direction: column;
   margin: 150px 0;
   justify-content: space-between;
 }
 
+.itemDetailsContainer {
+  margin-top: 40px;
+  display: flex;
+  width: 100%;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+
 .bigAssNumber {
-  position: absolute;
-  top: -180px;
-  font-size: 300px;
-  z-index: -1;
-  color: #f6f6f6;
+  font-size: 30px;
+  color: #000;
+}
+
+.bigAssNumber:before {
+  content: '';
+  display: inline-block;
+  margin-right: 20px;
+  width: 30px;
+  height: 1px;
+  background: #000;
 }
 
 .itemDetails {
   position: relative;
   order: 1;
-  height: 360px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -71,13 +78,15 @@ export default {
 }
 
 .itemImage {
+  display: flex;
+  align-items: center;
   order: 2;
 }
 
 .itemDetails__subtitle {
-  letter-spacing: 0.04em;
-  font-size: 1.5em;
-  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
 .itemDetails__title {
@@ -94,20 +103,32 @@ export default {
   line-height: 200%;
 }
 
+.itemDetails__link {
+  width: 260px;
+  height: 48px;
+  margin: 20px 0 40px 0;
+  border-radius: 4px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .itemDetails__link > a {
-  width: 100px;
   text-decoration: none;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
-  font-size: 1.3em;
+  font-size: 1.1em;
   justify-content: space-between;
 }
 
-.item {
-  width: 600px;
+.image {
+  width: 500px;
 }
 
-.itemContainer:nth-child(odd) .itemDetails {
+/* .itemContainer:nth-child(odd) .itemDetails {
   order: 2;
   align-items: flex-end;
 }
@@ -126,12 +147,16 @@ export default {
 
 .itemContainer:nth-child(odd) .itemImage {
   order: 1;
-}
+} */
 
 @media only screen and (max-width: 800px) {
   .itemContainer {
     flex-direction: column;
     width: 100vw;
+  }
+
+  .itemDetailsContainer {
+    flex-direction: column !important;
   }
 
   .itemDetails {

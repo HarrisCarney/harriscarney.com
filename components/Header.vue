@@ -27,8 +27,13 @@ export default {
 <style>
 .headerContainer {
   position: fixed;
+  top: 0;
+  height: 100px;
   width: 100vw;
+  padding: 0 80px;
   background: white;
+  display: flex;
+  align-items: flex-end;
   z-index: 999;
 }
 
@@ -41,8 +46,6 @@ export default {
   display: flex;
   width: 100%;
   align-items: center;
-  margin-top: 20px;
-  z-index: 1;
 }
 
 .header .logoContainer {
@@ -50,13 +53,11 @@ export default {
 }
 
 .header .logoContainer .logo {
-  margin-left: 80px;
 }
 
 .header .navigation {
   display: flex;
   flex: 1;
-  margin-right: 80px;
   height: 100%;
   align-items: center;
   justify-content: space-around;
