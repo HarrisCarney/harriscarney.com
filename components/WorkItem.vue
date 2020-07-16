@@ -38,12 +38,11 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 150px 0;
+  margin: 100px 0;
   justify-content: space-between;
 }
 
 .itemDetailsContainer {
-  margin-top: 40px;
   display: flex;
   width: 100%;
   flex-direction: row !important;
@@ -52,16 +51,18 @@ export default {
 
 .bigAssNumber {
   font-size: 30px;
-  color: #000;
+  margin-bottom: 40px;
+  color: #afafaf;
+  letter-spacing: 0.05em;
 }
 
 .bigAssNumber:before {
   content: '';
   display: inline-block;
-  margin-right: 20px;
-  width: 30px;
-  height: 1px;
-  background: #000;
+  margin-right: 14px;
+  width: 24px;
+  height: 2px;
+  background: #afafaf;
 }
 
 .itemDetails {
@@ -91,16 +92,17 @@ export default {
 
 .itemDetails__title {
   font-weight: bold;
-  letter-spacing: 0.04em;
-  font-size: 50px;
   width: 450px;
+  font-size: 3em;
+  letter-spacing: 0.05em;
 }
 
 .itemDetails__description {
   font-weight: normal;
-  font-size: 1.4em;
   max-width: 500px;
-  line-height: 200%;
+  font-size: 14px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
 }
 
 .itemDetails__link {
@@ -120,8 +122,9 @@ export default {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  font-size: 1.1em;
   justify-content: space-between;
+  letter-spacing: 0.05em;
+  font-size: 14px;
 }
 
 .image {
