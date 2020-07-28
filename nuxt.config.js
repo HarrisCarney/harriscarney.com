@@ -16,7 +16,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap'}
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap'
+      }
     ]
   },
   /*

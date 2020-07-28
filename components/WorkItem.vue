@@ -51,7 +51,7 @@ export default {
 
 .bigAssNumber {
   font-size: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   color: #afafaf;
   letter-spacing: 0.05em;
 }
@@ -60,6 +60,7 @@ export default {
   content: '';
   display: inline-block;
   margin-right: 14px;
+  border-radius: 10px;
   width: 24px;
   height: 2px;
   background: #afafaf;

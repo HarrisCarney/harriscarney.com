@@ -13,7 +13,7 @@
           design and functional development.
         </p>
         <div class="detailsButton">
-          <a href="#">Contact Me</a>
+          <a href="#contactForm">Contact Me</a>
         </div>
         <div class="detailsSocial">
           <a href="https://codepen.io/harriscarney" target="_">
@@ -67,15 +67,18 @@
         text-color="#DF1F2D"
       />
     </div>
+    <ContactForm />
   </div>
 </template>
 
 <script>
 import WorkItem from '~/components/WorkItem.vue'
+import ContactForm from '~/components/ContactForm.vue'
 
 export default {
   components: {
-    WorkItem
+    WorkItem,
+    ContactForm
   },
   data() {
     return {
@@ -249,7 +252,6 @@ export default {
 .profilePicture > img {
   width: 100%;
 }
-
 
 @media only screen and (max-width: 800px) {
   .landingDetails {

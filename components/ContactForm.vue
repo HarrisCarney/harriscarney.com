@@ -1,8 +1,8 @@
 <template>
-  <div class="formContainer">
+  <div id="contactForm" class="formContainer">
     <div class="infoBox">
-      <Logo class="what" />
-      <h2 class="contactTagline">Like What You See?</h2>
+      <h2 class="contactTagline">Let's have a friendly chat!</h2>
+      <p>Don't like forms? <a href="#">Shoot me an email!</a></p>
     </div>
     <form action="">
       <div class="testContainer">
@@ -30,19 +30,21 @@ export default {
 <style>
 .formContainer {
   display: flex;
-  width: 60%;
-  justify-content: space-around;
-}
-
-form {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 80px;
+  margin: 40px 0;
 }
 
 .testContainer {
   display: flex;
   flex-direction: column;
+}
+
+form {
+  width: 500px;
 }
 
 input {
@@ -61,33 +63,41 @@ label {
   letter-spacing: 0.08em;
   font-weight: bold;
   font-size: 12px;
-}
-
-.what {
-  transform: rotate(-90deg);
+  margin-top: 20px;
 }
 
 .submit {
-  border-radius: 100%;
-  width: 60px;
-  height: 60px;
-  background: var(--accent-color);
+  background: white;
+  width: 260px;
+  height: 48px;
+  margin: 20px 0 40px 0;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Sen';
+  text-transform: uppercase;
+  align-items: center;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  color: var(--accent-color);
 }
 
 .contactTagline {
-  color: var(--accent-color);
+  color: #333;
   letter-spacing: 0.08em;
+  font-size: 50px;
   text-transform: uppercase;
-  margin: 0;
-  transform-origin: 0 0;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  transform-origin: 50% 50%;
+  margin: 0 0 20px 0;
+  width: 250px;
+  padding: 0;
 }
 
 .infoBox {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
 }
 </style>
