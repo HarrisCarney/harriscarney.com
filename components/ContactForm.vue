@@ -100,4 +100,12 @@ label {
   display: flex;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 800px) {
+  .formContainer {
+    width: 100%;
+    padding: 0 40px;
+    flex-direction: column;
+  }
+}
 </style>

@@ -33,19 +33,17 @@ export default {
 </script>
 <style>
 .itemContainer {
-  position: relative;
   font-family: 'Sen';
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 100px 0;
   justify-content: space-between;
+  margin: 120px 0;
 }
 
 .itemDetailsContainer {
   display: flex;
   width: 100%;
-  flex-direction: row !important;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -73,6 +71,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   font-size: 12px;
+  width: 100%;
 }
 
 .itemDetails > * {
@@ -93,7 +92,7 @@ export default {
 
 .itemDetails__title {
   font-weight: bold;
-  width: 450px;
+  width: 60%;
   font-size: 3em;
   letter-spacing: 0.05em;
 }
@@ -132,31 +131,10 @@ export default {
   width: 500px;
 }
 
-/* .itemContainer:nth-child(odd) .itemDetails {
-  order: 2;
-  align-items: flex-end;
-}
-
-.itemContainer:nth-child(odd) .itemDetails > * {
-  text-align: right;
-}
-
-.itemContainer:nth-child(even) .itemDetails > .bigAssNumber {
-  left: -40px;
-}
-
-.itemContainer:nth-child(odd) .itemDetails > .bigAssNumber {
-  right: -40px;
-}
-
-.itemContainer:nth-child(odd) .itemImage {
-  order: 1;
-} */
-
 @media only screen and (max-width: 800px) {
   .itemContainer {
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
   }
 
   .itemDetailsContainer {
@@ -170,7 +148,7 @@ export default {
   }
 
   .image {
-    width: 300px;
+    width: 100%;
   }
 
   .itemDetails {
@@ -186,7 +164,7 @@ export default {
   }
 
   .bigAssNumber {
-    top: -450px;
+    margin-bottom: 40px;
   }
 }
 </style>

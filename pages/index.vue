@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="landingContainer">
     <div class="landingDetails">
       <div class="detailsContainer">
         <div class="detailsTitles">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <div class="myWork">
+    <div class="myWork" id="work">
       <h1>DESIGN. CREATE. BUILD.</h1>
       <WorkItem
         number="01"
@@ -104,8 +104,6 @@ export default {
 
 .myWork {
   width: 100%;
-  display: flex;
-  margin-top: 40px;
   padding: 0 80px;
   flex-direction: column;
 }
@@ -113,13 +111,12 @@ export default {
 .myWork > h1 {
   font-family: 'Sen';
   font-size: 20px;
+  margin-bottom: 80px;
   font-weight: bold;
   letter-spacing: 0.25em;
 }
 
 .landingDetails {
-  position: relative;
-  top: 100px;
   display: flex;
   align-items: center;
   min-height: 100vh;
@@ -236,6 +233,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 20px;
 }
 
 .textBar > h2 {
@@ -273,6 +271,7 @@ export default {
   }
 
   .myWork {
+    margin-top: 40px;
     padding: 0 40px;
   }
 }
