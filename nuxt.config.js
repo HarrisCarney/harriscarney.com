@@ -1,10 +1,9 @@
 export default {
-  
   mode: 'spa',
-  server: {     
-    port: 3000, // default: 3000     
-    host: '0.0.0.0', // default: localhost   
-  },  
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
   /*
    ** Headers of the page
    */
@@ -35,9 +34,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    'static/normalize.css'
-  ],
+  css: ['static/normalize.css'],
   /*
    ** Plugins to load before mounting the App
    */

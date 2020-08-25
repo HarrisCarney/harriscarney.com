@@ -13,8 +13,8 @@
       </div>
 
       <div class="mobile__navigation">
-				<img src="~/assets/images/menu.svg" width="20">
-			</div>
+        <img src="~/assets/images/menu.svg" width="20" />
+      </div>
     </div>
   </div>
 </template>
@@ -90,7 +90,7 @@ export default {
   .headerContainer {
     padding: 0 40px;
   }
-  
+
   .header {
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr;

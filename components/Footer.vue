@@ -1,8 +1,10 @@
 <template>
   <div class="footer">
-    <Logo class="footerLogo" />
-    <p>Copyright © 2020 Harris Carney</p>
-    <div class="footerSocial">
+    <Logo class="footer__logo" />
+
+    <p class="footer__copyright">Copyright © 2020 Harris Carney</p>
+
+    <div class="footer__socials">
       <a href="https://codepen.io/harriscarney" target="_">
         <img src="~assets/images/codepen.svg" width="16" />
       </a>
@@ -31,24 +33,25 @@ export default {
   height: 80px;
   background: #f3f3f3;
   padding: 0 80px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   font-size: 14px;
   align-items: center;
   justify-content: space-between;
 }
 
-.footerLogo {
+.footer__logo {
   width: 40px;
-  justify-self: flex-start;
+  grid-column: 1;
 }
 
-.footer p {
-  position: relative;
+.footer__copyright {
+  grid-column: 2;
   text-align: center;
-  margin: 0 auto;
 }
 
-.footerSocial {
+.footer__socials {
+  grid-column: 3;
   width: 200px;
   display: flex;
   justify-self: flex-end;
@@ -58,8 +61,27 @@ export default {
 @media only screen and (max-width: 800px) {
   .footer {
     height: 180px;
-    flex-direction: column;
-    justify-content: space-around;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+
+  .footer__logo {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .footer__copyright {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+  }
+  .footer__socials {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
   }
 }
 </style>

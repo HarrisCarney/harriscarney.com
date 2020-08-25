@@ -21,7 +21,6 @@ export default {
 html {
   font-family: 'Sen';
   font-size: 16px;
-  word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -34,11 +33,5 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-@media only screen and (max-width: 800px) {
-  .container {
-    flex-direction: column !important;
-  }
 }
 </style>

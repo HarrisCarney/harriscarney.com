@@ -1,21 +1,21 @@
 <template>
-  <div class="landingContainer">
-    <div class="landingDetails">
-      <div class="detailsContainer">
-        <div class="detailsTitles">
-          <h2 class="detailsSubtitle">Front End Developer & Designer</h2>
-          <h1 class="detailsTitle">Harris Carney</h1>
+  <div class="container">
+    <div class="landing">
+      <div class="landing__info">
+        <div class="info__titles">
+          <h2 class="titles__sub">Front End Developer & Designer</h2>
+          <h1 class="titles__main">Harris Carney</h1>
         </div>
-        <p class="detailsDescription">
+        <p class="info__description">
           Our interaction with the digital world has the ability to shape our
           views, trigger our emotions, and command our attention. My passion is
           bringing these ideas, feelings, and thoughts to fruition through good
           design and functional development.
         </p>
-        <div class="detailsButton">
+        <div class="info__action">
           <a href="#contactForm">Contact Me</a>
         </div>
-        <div class="detailsSocial">
+        <div class="info__socials">
           <a href="https://codepen.io/harriscarney" target="_">
             <img src="~assets/images/codepen.svg" width="16" />
           </a>
@@ -27,17 +27,19 @@
           </a>
         </div>
       </div>
-      <div class="landingImage">
-        <div class="profilePicture">
-          <img src="~assets/images/harris.png"/>
+
+      <div class="landing__profile">
+        <div class="profile__image">
+          <img src="~assets/images/harris.png" />
         </div>
-        <div class="textBar">
+        <div class="profile__textbar">
           <h2>My Work</h2>
           <img src="~assets/images/downArrow.svg" width="18" />
         </div>
       </div>
     </div>
-    <div class="myWork" id="work">
+
+    <div id="work" class="works">
       <h1>DESIGN. CREATE. BUILD.</h1>
       <WorkItem
         number="01"
@@ -102,53 +104,42 @@ export default {
   --texasfitt-green: #25c106;
 }
 
-.myWork {
-  width: 100%;
-  padding: 0 80px;
-  flex-direction: column;
-}
-
-.myWork > h1 {
-  font-family: 'Sen';
-  font-size: 20px;
-  margin-bottom: 80px;
-  font-weight: bold;
-  letter-spacing: 0.25em;
-}
-
-.landingDetails {
+.landing {
   display: flex;
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  order: 1;
   justify-content: space-between;
-  padding: 80px;
+  padding: 0 80px;
 }
 
-.detailsContainer {
+.landing__info {
   display: flex;
   order: 1;
-  height: 450px;
   flex-direction: column;
   justify-content: center;
 }
 
-.detailsTitle {
+.info__titles {
   position: relative;
-  margin: 10px 0 0px 0;
-  font-size: 3em;
-  letter-spacing: 0.05em;
+  margin: 10px 0 0 0;
+  font-size: 16px;
 }
 
-.detailsSubtitle {
-  font-size: 16px;
+.titles__sub {
+  font-size: 1em;
   font-weight: normal;
   letter-spacing: 2px;
   color: var(--accent-color);
 }
 
-.detailsDescription {
+.titles__main {
+  font-size: 3em;
+  margin: 12px 0 0px 0px;
+  padding: 0;
+}
+
+.info__description {
   margin: 20px 0 20px 0;
   width: 80%;
   max-width: 700px;
@@ -157,7 +148,11 @@ export default {
   letter-spacing: 0.06em;
 }
 
-.detailsButton {
+.info__description > span {
+  color: var(--accent-color);
+}
+
+.info__action {
   width: 260px;
   height: 48px;
   margin: 0 0 40px 0;
@@ -168,7 +163,7 @@ export default {
   align-items: center;
 }
 
-.detailsButton > a {
+.info__action > a {
   text-decoration: none;
   font-family: 'Sen';
   color: var(--accent-color);
@@ -177,104 +172,101 @@ export default {
   font-size: 14px;
 }
 
-.detailsButton:hover {
+.info__action:hover {
   background: var(--accent-color);
 }
 
-.detailsButton:hover a {
+.info__action:hover a {
   color: white;
 }
 
-.detailsDescription > span {
-  color: var(--accent-color);
-}
-
-.detailsAction {
-  width: 280px;
-  height: 50px;
-  border-radius: 4px;
-  text-align: center;
-  line-height: 50px;
-  font-weight: bold;
-  border: 1px solid var(--accent-color);
-  cursor: pointer;
-}
-
-.detailsAction:hover {
-  background: var(--accent-color);
-}
-
-.detailsAction:hover > a {
-  color: #fff;
-}
-
-.detailsAction > a {
-  text-decoration: none;
-  color: var(--accent-color);
-  font-weight: normal;
-  font-size: 14px;
-}
-
-.detailsSocial {
+.info__socials {
   display: flex;
   width: 200px;
   justify-content: space-between;
   align-items: center;
 }
 
-.landingImage {
+.landing__profile {
   width: 40%;
   order: 2;
   display: flex;
   align-items: flex-end;
 }
 
-.textBar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.textBar > h2 {
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.profilePicture {
+.profile__image {
+  width: 100%;
+  padding: 80px 0 0 0;
   background: var(--accent-color);
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
-.profilePicture > img {
+.profile__image > img {
   width: 40%;
   min-width: 100px;
 }
 
+.profile__textbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.profile__textbar > h2 {
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.works {
+  width: 100%;
+  padding: 0 80px;
+  flex-direction: column;
+}
+
+.works > h1 {
+  font-family: 'Sen';
+  font-size: 20px;
+  margin-bottom: 80px;
+  font-weight: bold;
+  letter-spacing: 0.25em;
+}
+
 @media only screen and (max-width: 800px) {
-  .landingDetails {
+  .landing {
     flex-direction: column;
     align-items: flex-start;
     margin: 0;
     padding: 0 40px;
   }
-  .landingImage {
+
+  .info__titles {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+  .info__description {
+    width: 100%;
+  }
+
+  .landing__profile {
     order: 1;
     width: 100%;
   }
-  .detailsContainer {
+
+  .landing__info {
     order: 2;
   }
 
-  .textBar {
+  .profile__textbar {
     display: none;
   }
 
-  .myWork {
+  .works {
     margin-top: 40px;
     padding: 0 40px;
   }

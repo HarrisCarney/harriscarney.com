@@ -1,12 +1,18 @@
 <template>
-  <div id="contactForm" class="formContainer">
-    <div class="infoBox">
-      <h2 class="contactTagline">Let's have a friendly chat!</h2>
-      <p>Don't like forms? <a href="mailto:me@harriscarney.com">Shoot me an email!</a></p>
+  <div id="contactForm" class="form__container">
+    <div class="form__info">
+      <h2 class="form__tagline">Let's have a friendly chat!</h2>
+      <p>
+        Don't like forms?
+        <a href="mailto:me@harriscarney.com">Shoot me an email!</a>
+      </p>
     </div>
-    <form action="https://formsubmit.io/send/3902f58a-9ecb-4708-b35f-ea5b1e2f130c" method="post">
-      <div class="testContainer">
-        <input name="_formsubmit_id" type="text" style="display:none">
+    <form
+      action="https://formsubmit.io/send/3902f58a-9ecb-4708-b35f-ea5b1e2f130c"
+      method="post"
+    >
+      <div class="input__container">
+        <input name="_formsubmit_id" type="text" style="display:none" />
         <!-- <input name="_redirect" type="hidden" id="name" value="https://harriscarney.com/"> -->
         <label for="name">Name</label>
         <input type="text" name="name" />
@@ -20,33 +26,29 @@
   </div>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
 <style>
-.formContainer {
+.form__container {
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   padding: 0 80px;
   margin: 40px 0;
 }
 
-.testContainer {
+.input__container {
   display: flex;
   flex-direction: column;
 }
 
+.form__info {
+  flex: 1;
+}
+
 form {
-  width: 500px;
+  flex: 1;
+  width: 100%;
 }
 
 input {
@@ -54,7 +56,7 @@ input {
   background: #f6f6f6;
   border: none;
   height: 40px;
-  width: 300px;
+  width: 100%;
   margin: 5px;
   padding-left: 10px;
   font-size: 14px;
@@ -70,7 +72,7 @@ label {
 
 .submit {
   background: white;
-  width: 260px;
+  width: 100%;
   height: 48px;
   margin: 20px 0 40px 0;
   border-radius: 4px;
@@ -88,23 +90,22 @@ label {
   color: var(--accent-color);
 }
 
-.contactTagline {
+.form__tagline {
   color: #333;
   letter-spacing: 0.08em;
   font-size: 50px;
   text-transform: uppercase;
   margin: 0 0 20px 0;
-  width: 250px;
   padding: 0;
 }
 
-.infoBox {
+.form__info {
   display: flex;
   flex-direction: column;
 }
 
 @media only screen and (max-width: 800px) {
-  .formContainer {
+  .form__container {
     width: 100%;
     padding: 0 40px;
     flex-direction: column;
