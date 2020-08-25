@@ -2,10 +2,12 @@
   <div id="contactForm" class="formContainer">
     <div class="infoBox">
       <h2 class="contactTagline">Let's have a friendly chat!</h2>
-      <p>Don't like forms? <a href="#">Shoot me an email!</a></p>
+      <p>Don't like forms? <a href="mailto:me@harriscarney.com">Shoot me an email!</a></p>
     </div>
-    <form action="">
+    <form action="https://formsubmit.io/send/3902f58a-9ecb-4708-b35f-ea5b1e2f130c" method="post">
       <div class="testContainer">
+        <input name="_formsubmit_id" type="text" style="display:none">
+        <!-- <input name="_redirect" type="hidden" id="name" value="https://harriscarney.com/"> -->
         <label for="name">Name</label>
         <input type="text" name="name" />
         <label for="email">Email</label>

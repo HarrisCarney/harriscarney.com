@@ -11,6 +11,10 @@
         <NuxtLink to="#work" class="link">Work</NuxtLink>
         <NuxtLink to="#contactForm" class="link">Contact</NuxtLink>
       </div>
+
+      <div class="mobile__navigation">
+				<img src="~/assets/images/menu.svg" width="20">
+			</div>
     </div>
   </div>
 </template>
@@ -31,15 +35,16 @@ export default {
   height: 100px;
   width: 100vw;
   padding: 0 80px;
-  background: white;
   display: flex;
+  background: white;
   align-items: flex-end;
   z-index: 999;
 }
 
-.mobile--navigation {
-  height: 50px;
-  display: flex;
+.mobile__navigation {
+  height: 20px;
+  display: none;
+  cursor: pointer;
 }
 
 .logo {
@@ -51,6 +56,8 @@ export default {
   display: flex;
   width: 100%;
   align-items: center;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(50px, 350px);
 }
 
 .header .logoContainer {
@@ -58,9 +65,11 @@ export default {
 }
 
 .header .navigation {
+  grid-column: 2;
   display: flex;
   flex: 1;
   height: 100%;
+  align-self: flex-end;
   align-items: center;
   justify-content: space-between;
   max-width: 350px;
@@ -84,14 +93,29 @@ export default {
   
   .header {
     width: 100vw;
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .logoContainer {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header .mobile__navigation {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 3;
   }
 
   .header .navigation {
     display: none;
-    min-height: 200px;
+    grid-row: 2;
+    grid-column: 1 / -1;
     width: 100%;
-    padding: 20px 0px;
+    padding: 20px 0;
+    min-height: 220px;
     background: black;
     flex-direction: column;
     color: white;

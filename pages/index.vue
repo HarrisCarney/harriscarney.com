@@ -29,7 +29,7 @@
       </div>
       <div class="landingImage">
         <div class="profilePicture">
-          <img src="~assets/images/harris.png" />
+          <img src="~assets/images/harris.png"/>
         </div>
         <div class="textBar">
           <h2>My Work</h2>
@@ -82,7 +82,7 @@ export default {
   },
   data() {
     return {
-      title: 'Harris Carney | Web Developer & Designer'
+      title: 'Harris Carney | Developer & Designer'
     }
   },
   head() {
@@ -245,10 +245,14 @@ export default {
 
 .profilePicture {
   background: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .profilePicture > img {
-  width: 100%;
+  width: 40%;
+  min-width: 100px;
 }
 
 @media only screen and (max-width: 800px) {
