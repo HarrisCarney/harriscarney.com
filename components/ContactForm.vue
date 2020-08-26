@@ -15,29 +15,30 @@
         <input name="_formsubmit_id" type="text" style="display:none" />
         <input name="_redirect" type="hidden" id="name" value="https://harriscarney.com/">
         <div class="input__row">
-          <div class="input__item">
+          <div class="input__item input__item--small">
             <label for="name">Name</label>
             <input type="text" name="name" class="input" /> 
           </div>
-          <div class="input__item">
+          <div class="input__item input__item--small">
             <label for="email">Email</label>
             <input type="text" name="email" class="input" />
           </div>
         </div>
-        <div class="input__item">
-          <label for="message">Message</label>
-          <textarea type="textbox" name="message" rows="4" class="message"/>
+        <div class="input__row">
+          <div class="input__item">
+            <label for="message">Message</label>
+            <textarea type="textbox" name="message" rows="4" class="message"/>
+          </div>
         </div>
       </div>
-      <div class="input__item">
-        <input type="submit" class="submit" />
-      </div>
+      <input type="submit" class="submit" />
     </form>
   </div>
 </template>
 
 <style>
 .form__container {
+  position: relative;
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -55,13 +56,18 @@
 
 .input__row {
   display: flex;
+  justify-content: space-between;
 }
 
 .input__item {
   display: flex;
-  flex: 1;
+  width: 100%;
   flex-direction: column;
   margin-bottom: 20px;
+}
+
+.input__item--small {
+  width: 49%;
 }
 
 .form__info {
@@ -78,7 +84,6 @@ form {
   background: #f6f6f6;
   border: none;
   height: 40px;
-  width: 100%;
   margin: 5px 0 0 0;
   padding-left: 10px;
   font-size: 14px;
@@ -153,7 +158,7 @@ label {
 
 @media only screen and (max-width: 800px) {
   .form__tagline {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .form__container {
@@ -168,6 +173,10 @@ label {
 
   .input__row {
     flex-direction: column;
+  }
+
+  .input__item--small {
+    width: 100%;
   }
 }
 </style>
