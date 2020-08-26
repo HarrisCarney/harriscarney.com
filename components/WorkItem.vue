@@ -135,6 +135,7 @@ export default {
   .itemContainer {
     flex-direction: column;
     width: 100%;
+    margin: 60px 0;
   }
 
   .itemDetailsContainer {
@@ -157,6 +158,14 @@ export default {
 
   .itemDetails > * {
     text-align: left !important;
+  }
+
+  .itemDetails__title {
+    width: 100%;
+  }
+
+  .itemDetails__link {
+    width: 100%;
   }
 
   .itemImage {

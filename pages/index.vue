@@ -253,6 +253,10 @@ export default {
     width: 100%;
   }
 
+  .info__action {
+    width: 100%;
+  }
+
   .landing__profile {
     order: 1;
     width: 100%;
