@@ -64,7 +64,7 @@
         title="The Amazing Spider-Man"
         subtitle="Project"
         description="I absolutely love the game, The Amazing Spiderman. After looking at Insomniac Game’s rather lacking website, I decided to redesign and build one myself.  This website is built in vanilla HTML, CSS, and JS."
-        link="https://blkfoxcreative.com"
+        link="https://spiderman.harriscarney.com"
         image="spiderman.png"
         text-color="#DF1F2D"
       />
