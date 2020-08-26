@@ -107,7 +107,7 @@ export default {
 .landing {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   width: 100%;
   justify-content: space-between;
   padding: 0 80px;
@@ -188,7 +188,7 @@ export default {
 }
 
 .landing__profile {
-  width: 40%;
+  position: relative;
   order: 2;
   display: flex;
   align-items: flex-end;
@@ -204,7 +204,7 @@ export default {
 }
 
 .profile__image > img {
-  width: 40%;
+  width: 45%;
   min-width: 100px;
 }
 

@@ -12,7 +12,7 @@
         <NuxtLink to="#contactForm" class="link">Contact</NuxtLink>
       </div>
 
-      <div class="mobile__navigation">
+      <div class="mobile__navigation" v-on:click="mobileNav">
         <img src="~/assets/images/menu.svg" width="20" />
       </div>
     </div>
@@ -20,13 +20,31 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo.vue';
 
 export default {
   components: {
     Logo
+  },
+  methods: {
+    getStyle(query, name) {
+      var element = document.querySelector(query);
+      return element.currentStyle
+        ? element.currentStyle[name]
+        : window.getComputedStyle
+        ? window.getComputedStyle(element, null).getPropertyValue(name)
+        : null;
+    },
+    mobileNav(e) {
+      if (this.getStyle(".navigation", "display") === "none") {
+        document.querySelector('.navigation').style.display = "flex";
+      } else {
+        document.querySelector('.navigation').style.display = "none";
+      }
+    }
   }
 }
+
 </script>
 <style>
 .headerContainer {
@@ -42,6 +60,8 @@ export default {
 }
 
 .mobile__navigation {
+  width: 20px;
+  justify-self: end;
   height: 20px;
   display: none;
   cursor: pointer;
@@ -94,7 +114,7 @@ export default {
   .header {
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 80px 1fr;
   }
 
   .logoContainer {
@@ -112,17 +132,16 @@ export default {
   .header .navigation {
     display: none;
     grid-row: 2;
-    grid-column: 1 / -1;
-    width: 100%;
-    padding: 20px 0;
-    min-height: 220px;
+    grid-column: 1 / -1 !important;
     background: black;
     flex-direction: column;
-    color: white;
+    max-width: 100%;
   }
 
   .header .navigation a {
     color: white;
+    height: 60px;
+    line-height: 60px;
   }
 }
 </style>

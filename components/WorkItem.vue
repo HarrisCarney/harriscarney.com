@@ -37,7 +37,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 120px 0;
+  margin: 0 0 180px 0;
 }
 
 .itemDetailsContainer {
