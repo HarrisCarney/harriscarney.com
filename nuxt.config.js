@@ -16,7 +16,15 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
-      }
+      },
+      {
+        'property':  'og:title',
+        'content':  `Harris Carney | Developer & Designer`,
+      },
+      {
+        'property':  'og:image',
+        'content':  `/thumbnail.png`,
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },

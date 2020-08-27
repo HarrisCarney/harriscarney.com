@@ -45,7 +45,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 0 80px;
-  margin: 40px 0;
+  margin: 40px 0 120px 0;
 }
 
 .input__container {
@@ -165,6 +165,7 @@ label {
     width: 100%;
     padding: 0 40px;
     flex-direction: column;
+    margin-bottom: 60px;
   }
 
   .input__container {
