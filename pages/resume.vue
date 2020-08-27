@@ -37,7 +37,7 @@ export default {
   }
 
   @media only screen and (max-width: 800px) {
-    .pdf {
+    .pdf > * {
       width: 100%;
     }
   }
