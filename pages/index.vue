@@ -45,7 +45,7 @@
         number="01"
         title="BLK Fox Creative"
         subtitle="Freelance"
-        description="This is a portfolio website that I build for an aspirting young graphic designer. She provided me with a custom photoshop design and from there I build the website in vanilla HTML, CSS, and JS."
+        description="This is a portfolio website that I built for an aspirting young graphic designer. She provided me with a custom photoshop design and from there I created the website in vanilla HTML, CSS, and JS."
         link="https://blkfoxcreative.com"
         image="blkfoxcreative.png"
         text-color="#F04E36"
