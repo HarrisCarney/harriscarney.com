@@ -3,7 +3,7 @@
     <div class="form__info">
       <h2 class="form__tagline">Let's have a <br> friendly chat!</h2>
       <p>
-        If you don't like using forms email me! 
+        Don't like forms? Email me!  
         <a href="mailto:me@harriscarney.com" class="form__email"><img src="~/assets/images/email.svg" alt="">me@harriscarney.com</a>
       </p>
     </div>

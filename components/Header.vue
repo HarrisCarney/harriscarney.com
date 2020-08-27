@@ -7,7 +7,7 @@
 
       <div class="navigation">
         <NuxtLink to="/" class="link">Home</NuxtLink>
-        <NuxtLink to="/resume" class="link">Resume</NuxtLink>
+        <NuxtLink to="resume" class="link">Resume</NuxtLink>
         <NuxtLink to="#work" class="link">Work</NuxtLink>
         <NuxtLink to="#contactForm" class="link">Contact</NuxtLink>
       </div>
