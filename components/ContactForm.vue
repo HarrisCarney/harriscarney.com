@@ -13,7 +13,7 @@
     >
       <div class="input__container">
         <input name="_formsubmit_id" type="text" style="display:none" />
-        <input name="_redirect" type="hidden" id="name" value="https://harriscarney.com/">
+        <input name="_redirect" type="hidden" id="name" value="https://harriscarney.com/thanks">
         <div class="input__row">
           <div class="input__item input__item--small">
             <label for="name">Name</label>
