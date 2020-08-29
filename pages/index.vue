@@ -19,7 +19,7 @@
           <a href="https://codepen.io/harriscarney" target="_">
             <img src="~assets/images/codepen.svg" width="16" />
           </a>
-          <a href="#" target="_">
+          <a href="https://www.linkedin.com/in/harris-carney-7b0914a4/" target="_">
             <img src="~assets/images/linkedin.svg" width="16" />
           </a>
           <a href="https://github.com/harriscarney" target="_">
