@@ -2,7 +2,7 @@
   <div class="footer">
     <Logo class="footer__logo" />
 
-    <p class="footer__copyright">Copyright © 2020 Harris Carney</p>
+    <p class="footer__copyright">Copyright © 2021 Harris Carney</p>
 
     <div class="footer__socials">
       <a href="https://codepen.io/harriscarney" target="_">

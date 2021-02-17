@@ -13,7 +13,9 @@
         </div>
       </div>
       <div class="itemImage">
-        <img :src="require(`@/assets/images/${image}`)" class="image" />
+        <a :href="link">
+          <img :src="require(`@/assets/images/${image}`)" class="image" />
+        </a>
       </div>
     </div>
   </div>
@@ -33,7 +35,8 @@ export default {
 </script>
 <style>
 .itemContainer {
-  font-family: 'Sen';
+  font-family: 'Inter';
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -109,7 +112,7 @@ export default {
   width: 260px;
   height: 48px;
   margin: 20px 0 40px 0;
-  border-radius: 4px;
+  border-radius: 24px;
   border: 1px solid;
   display: flex;
   justify-content: center;
@@ -128,7 +131,7 @@ export default {
 }
 
 .image {
-  width: 500px;
+  width: 600px;
 }
 
 @media only screen and (max-width: 800px) {

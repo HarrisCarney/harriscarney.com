@@ -31,8 +31,15 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap'
+          'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/aos@2.3.1/dist/aos.css'
       }
+    ],
+    script: [
+      { hid: 'aos', src: 'https://unpkg.com/aos@2.3.1/dist/aos.js', defer: false }
     ]
   },
   /*

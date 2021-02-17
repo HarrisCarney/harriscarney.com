@@ -13,13 +13,17 @@ export default {
   components: {
     Header,
     Footer
+  },
+
+  mounted() {
+    AOS.init();
   }
 }
 </script>
 
 <style>
 html {
-  font-family: 'Sen';
+  font-family: 'Inter';
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

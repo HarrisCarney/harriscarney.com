@@ -1,7 +1,7 @@
 <template>
   <div class="headerContainer">
     <div class="header">
-      <div class="logoContainer">
+      <div class="logoContainer" data-aos="fade-down">
         <a href="/"><Logo class="logo"/></a>
       </div>
 
@@ -48,15 +48,16 @@ export default {
 </script>
 <style>
 .headerContainer {
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
   height: 100px;
   width: 100vw;
   padding: 0 80px;
   display: flex;
-  background: white;
   align-items: flex-end;
   z-index: 999;
+  background: #00071C;
+  z-index: 10;
 }
 
 .mobile__navigation {
@@ -78,6 +79,7 @@ export default {
   align-items: center;
   display: grid;
   grid-template-columns: minmax(300px, 1fr) minmax(50px, 350px);
+  z-index: 1;
 }
 
 .header .logoContainer {
@@ -97,9 +99,10 @@ export default {
 
 .header .navigation a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 13px;
 }
 
 .header .navigation a:hover {
@@ -133,7 +136,7 @@ export default {
     display: none;
     grid-row: 2;
     grid-column: 1 / -1 !important;
-    background: black;
+    background: var(--accent-color);
     flex-direction: column;
     max-width: 100%;
   }
